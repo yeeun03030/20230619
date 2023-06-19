@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            var appendDocument = function () {
+                for (var i = 0; i < 20; i++) {
+                    $("<h1>Infinity Scroll</h1>").appendTo('body');
+                }
+            };
+            appendDocument();
+            
+            $(window).scroll(function() {
+                    // var top = $(window).scrollTop();
+                    // var windowHeight = $(window).height();
+                    // var docHeight = $(document).height();
+                    // alert("scrllTop(): " + top + ", windowHeight: " + windowHeight + ", documentHeight: " + docHeight);
+
+                    var scrollHeight = Math.ceil($(window).scrollTop() + $(window).height()); // 올림
+                    var docHeight = $(document).height();
+
+                    if (scrollHeight == docHeight) {
+                        appendDocument();
+                    };
+                });
+
+        });
+    </script>
+</head>
+<body>
+    <!-- <h1>test</h1> -->
+</body>
+</html>
