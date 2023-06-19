@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex11</title>
+</head>
+<body>
+    <div class="drawer">
+        <h1>Logo</h1>
+        <dic class="drawer-menu">
+            <p>Lorem ipsum dolor sit amet consectetur Consequatur</p>
+        </dic>
+    </div>
+    <div class="content">
+        <h1>Lorm ipsum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem illum dignissimos soluta expedita eos explicabo officiis officia, asperiores distinctio amet id impedit commodi, quisquam consequatur, ea fuga numquam cumque rem!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatum iure ea rem itaque laboriosam ipsa, consequatur perferendis! Vitae pariatur accusamus similique assumenda delectus aliquam reiciendis Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui dolores ipsam accusantium nam reiciendis! Necessitatibus praesentium, ipsam suscipit deserunt commodi soluta sit est inventore blanditiis sunt magni voluptate, debitis vero? fugiat perferendis provident nostrum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptas dignissimos porro vel ratione optio vero iure, error iusto doloribus labore, eveniet explicabo culpa ad! Illum quam sequi vel ad?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed qui corrupti quasi voluptatum beatae et accusantium, maxime nisi a rem eius, veritatis soluta nulla quia possimus unde. Voluptatem, aliquam molestiae. elit. Culpa optio nemo saepe perferendis placeat explicabo animi nulla ullam est. Officiis quidem incidunt dolore ullam tempora aperiam dignissimos hic odio eaque!</p>
+    </div>
+    <script src="../js/jquery-3.7.0.js"></script>
+    <script>
+        $('body').click(function () {
+            $('.drawer-menu').slideToggle("slow")
+        })
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .drawer {
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            color: white;
+            background-color: red;
+        }
+        .drawer h1 {
+            height: 50px;
+            line-height: 50px;
+        }
+        .drawer-menu {
+            display: none;
+        }
+        .content {
+            /* 글자가 양쪽에 붙지 않게 설정합니다. */
+            padding: 10px;
+            /* div.drawer에 의해 가려지지 않게 내립니다. */
+            padding-top: 60px;
+        }
+    </style>
+</body>
+</html>
