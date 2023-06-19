@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.0.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var imgs = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png', '11.png'];
+            var h = 0;
+            for (var i = 0; i < 100; i++) {
+                h = Math.floor(Math.random() * 100) + 50;
+                $("<div><img class='image" + i + "' src='img/" + imgs[i%11] + "'></div>").addClass("box")
+                                .css({
+                                    width: 100,
+                                    height: h
+                                })
+                                .appendTo("body");
+                $("img.image" + i).css({
+                    width: 100,
+                    height: h
+                })
+            };
+            $("body").masonry({
+                columnWidth: 110
+            });
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: black;
+        }
+        .box {
+            background-color: white;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
