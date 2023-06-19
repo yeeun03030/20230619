@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-3</title>
+    <script>
+        window.onload = function () {
+            var cnt = 0;
+            var img = document.getElementById('image');
+            var frames = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png', '11.png'];
+            setInterval (function () {
+                img.src = "img/" + frames [cnt++ % frames.length];
+            }, 1000/frames.length);
+        }
+    </script>
+</head>
+<body>
+    <img id="image">
+</body>
+</html>
